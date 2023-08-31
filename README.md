@@ -1,18 +1,31 @@
 # seasoning-converter
 
-## コマンド備忘録
-### ローカル環境：Dockerイメージのビルド、コンテナ起動、プッシュ
+## デプロイまでのコマンド（コピペ用）
+### ローカル環境
 ```bash
-# Docker イメージのビルド
-docker-compose build
+# Docker イメージのビルド（本番環境用）
+docker compose -f docker-compose_deploy.yml build
 
-# Docker コンテナの起動
-docker-compose up -d
+# AWS CLIログイン
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 970168658714.dkr.ecr.ap-northeast-1.amazonaws.com
 
-# Docker コンテナ内でコマンドを実行する
-docker-compose exec app php -v
-
-# Docker コンテナの停止・削除
-docker-compose down
+# Docker イメージをAWS ECRへプッシュ
+docker compose -f docker-compose_deploy.yml push
 ```
 ### 開発環境：Dockerイメージのプル、コンテナ起動
+```bash
+# EC2にターミナルからSSH接続
+ssh -i /Users/yuu/programming/aws/pantuman-ssh-key.cer ec2-user@54.95.11.14
+
+# AWS CLIログイン
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 970168658714.dkr.ecr.ap-northeast-1.amazonaws.com
+
+# Docker イメージのプル
+docker compose pull
+
+# Docker コンテナ停止
+docker compose down
+
+# Docker コンテナ起動
+docker compose up -d
+```
