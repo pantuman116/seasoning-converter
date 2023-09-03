@@ -14,15 +14,18 @@
             <a class="text-body text-decoration-none" href="index.php">Seasoning Converter</a>
         </h1>
     </header>
-    <div class="container">
-        <button type="submit" class="btn btn-primary">単位変換へ</button>
-    </div>
-    <div class="container">
-        <button type="submit" class="btn btn-primary">調味料新規追加</button>
+    <div class="container mb-5 ">
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary">単位変換へ</button>
+            </div>
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary">調味料新規追加</button>
+            </div>
+        </div>
     </div>
     <div class="container">
         <table class="table table-striped">
-            <caption>変換表</caption>
             <?php if (count($weights) > 0) : ?>
                 <thead>
                     <tr>
