@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8mb4">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- <link rel="stylesheet" href="stylesheets/css/app.css"> -->
+    <link rel="stylesheet" href="stylesheets/css/app.css">
     <title><?php echo '重量表一覧'; ?></title>
 </head>
 
@@ -21,31 +21,35 @@
         <button type="submit" class="btn btn-primary">調味料新規追加</button>
     </div>
     <div class="container">
-        <table>
+        <table class="table table-striped">
             <caption>変換表</caption>
             <?php if (count($weights) > 0) : ?>
-                <tr>
-                    <th>調味料</th>
-                    <th>大さじ1（15cc）</th>
-                    <th>小さじ1（5cc）</th>
-                    <th>カップ1（200cc）</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th scope="col">調味料</th>
+                        <th scope="col">大さじ1（15cc）</th>
+                        <th scope="col">小さじ1（5cc）</th>
+                        <th scope="col">カップ1（200cc）</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <?php foreach ($weights as $weight) : ?>
                     <tr>
-                        <th>
+                        <th scope="row">
                             <?php echo $weight['seasoning'] ?>
                         </th>
-                        <th>
+                        <td>
                             <?php echo $weight['tablespoon'] . 'g' ?>
-                        </th>
-                        <th>
+                        </td>
+                        <td>
                             <?php echo $weight['teaspoon'] . 'g' ?>
-                        </th>
-                        <th>
+                        </td>
+                        <td>
                             <?php echo $weight['cup'] . 'g' ?>
-                        </th>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
+                </tbody>
             <?php else : ?>
                 <p>重量表が登録されていません。</p>
             <?php endif; ?>

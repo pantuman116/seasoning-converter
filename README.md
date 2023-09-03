@@ -29,3 +29,9 @@ docker compose down
 # Docker コンテナ起動
 docker compose up -d
 ```
+
+## css関連
+### scssのコンパイル
+```bash
+vendor/scssphp/scssphp/bin/pscss < stylesheets/scss/app.scss > stylesheets/css/app.css
+```
