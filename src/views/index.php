@@ -14,13 +14,13 @@
             <a class="text-body text-decoration-none" href="index.php">Seasoning Converter</a>
         </h1>
     </header>
-    <div class="container mb-5 ">
+    <div class="container mb-5">
         <div class="row">
-            <div class="col text-center">
-                <button type="submit" class="btn btn-primary">単位変換へ</button>
+            <div class="col text-left">
+                <button type="submit" class="btn btn-primary">単位変換</button>
             </div>
-            <div class="col text-center">
-                <button type="submit" class="btn btn-primary">調味料新規追加</button>
+            <div class="col text-right">
+                <button type="submit" class="btn btn-primary">新規追加</button>
             </div>
         </div>
     </div>
