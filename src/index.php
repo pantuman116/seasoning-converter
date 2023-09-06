@@ -3,13 +3,16 @@
 // require_once __DIR__ . '/lib/escape.php';
 require_once __DIR__ . '/lib/mysqli.php';
 
-function listWeights($link)
+/**
+ * @return array<int<0, max>, array<string, string>> $weights
+ */
+function listWeights(object $link): array
 {
     $sql = 'SELECT seasoning, tablespoon, teaspoon, cup FROM weights;';
     $results = mysqli_query($link, $sql);
 
     $weights = [];
-    while($weight = mysqli_fetch_assoc($results)){
+    while ($weight = mysqli_fetch_assoc($results)) {
         $weights[] = $weight;
     }
     mysqli_free_result($results);

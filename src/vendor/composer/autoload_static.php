@@ -9,6 +9,8 @@ class ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '9b38cf48e83f5d8f60375221cd213eee' => __DIR__ . '/..' . '/phpstan/phpstan/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
     );
 
@@ -18,11 +20,19 @@ class ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Component\\VarExporter\\' => 30,
+            'Symfony\\Component\\Filesystem\\' => 29,
+            'Symfony\\Component\\DependencyInjection\\' => 38,
+            'Symfony\\Component\\Config\\' => 25,
             'ScssPhp\\ScssPhp\\' => 16,
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Container\\' => 14,
             'PhpOption\\' => 10,
+            'PDepend\\' => 8,
         ),
         'G' => 
         array (
@@ -31,6 +41,11 @@ class ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25
         'D' => 
         array (
             'Dotenv\\' => 7,
+        ),
+        'C' => 
+        array (
+            'Composer\\XdebugHandler\\' => 23,
+            'Composer\\Pcre\\' => 14,
         ),
     );
 
@@ -47,13 +62,45 @@ class ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
+        'Symfony\\Contracts\\Service\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/service-contracts',
+        ),
+        'Symfony\\Component\\VarExporter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-exporter',
+        ),
+        'Symfony\\Component\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/filesystem',
+        ),
+        'Symfony\\Component\\DependencyInjection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
+        ),
+        'Symfony\\Component\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/config',
+        ),
         'ScssPhp\\ScssPhp\\' => 
         array (
             0 => __DIR__ . '/..' . '/scssphp/scssphp/src',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'PDepend\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pdepend/pdepend/src/main/php/PDepend',
         ),
         'GrahamCampbell\\ResultType\\' => 
         array (
@@ -62,6 +109,24 @@ class ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Composer\\XdebugHandler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
+        ),
+        'Composer\\Pcre\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/pcre/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'PHPMD\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpmd/phpmd/src/main/php',
+            ),
         ),
     );
 
@@ -78,6 +143,7 @@ class ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitc1c93f5a582190f4f2d6887b291f6a25::$classMap;
 
         }, null, ClassLoader::class);

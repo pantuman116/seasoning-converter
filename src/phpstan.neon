@@ -1,0 +1,10 @@
+parameters:
+  level: 6
+  paths:
+    - .
+  excludePaths:
+    - .vscode
+    - databases
+    - stylesheets
+    - vendor
+    - views
