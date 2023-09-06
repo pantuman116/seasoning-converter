@@ -8,3 +8,4 @@ parameters:
     - stylesheets
     - vendor
     - views
+    - tests

@@ -3,6 +3,7 @@
   <description>A custom PSR12</description>
   <file>./</file>
   <exclude-pattern>./vendor/*</exclude-pattern>
+  <exclude-pattern>./tests/*</exclude-pattern>
   <arg name="colors"/>
   <arg value="s"/>
   <rule ref="PSR12">
