@@ -1,7 +1,7 @@
 <?php
 
-// require_once __DIR__ . '/lib/escape.php';
-require_once __DIR__ . '/lib/mysqli.php';
+// require_once __DIR__ . '/../api/escape.php';
+require_once __DIR__ . '/../api/mysqli.php';
 
 /**
  * @return array<int<0, max>, array<string, string>> $weights
@@ -25,5 +25,5 @@ mysqli_close($link);
 
 
 // $title = '読書ログの一覧';
-// $contents = __DIR__ . '/views/index.php';
-include __DIR__ . '/views/index.php';
+// $contents = __DIR__ . '/../views/pages/index.php';
+include __DIR__ . '/../views/pages/index.php';

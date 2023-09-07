@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../lib/mysqli.php';
+require 'mysqli.php';
 
 function insertDefaultTable($link): void
 {
@@ -43,9 +43,10 @@ function insertDefaultTable($link): void
         $result = mysqli_query($link, $insertTableSql);
         if ($result) {
             echo 'テーブルを挿入できました' . PHP_EOL;
+        } else {
+            echo 'テーブルを挿入できませんでした' . PHP_EOL;
+            echo 'Debugging Error' . mysqli_error($link) . PHP_EOL;
         }
-        echo 'テーブルを挿入できませんでした' . PHP_EOL;
-        echo 'Debugging Error' . mysqli_error($link) . PHP_EOL;
     }
 }
 
@@ -65,9 +66,10 @@ function createTable($link): void
     $result = mysqli_query($link, $createTableSql);
     if ($result) {
         echo 'テーブルを作成できました' . PHP_EOL;
+    } else {
+        echo 'テーブルを作成できませんでした' . PHP_EOL;
+        echo 'Debugging Error:' . mysqli_error($link) . PHP_EOL;
     }
-    echo 'テーブルを作成できませんでした' . PHP_EOL;
-    echo 'Debugging Error:' . mysqli_error($link) . PHP_EOL;
 }
 
 function dropTable($link): void
@@ -76,9 +78,10 @@ function dropTable($link): void
     $result = mysqli_query($link, $dropTableSql);
     if ($result) {
         echo '重量表テーブルを削除できました' . PHP_EOL;
+    } else {
+        echo '重量表テーブルを削除できませんでした' . PHP_EOL;
+        echo 'Debugging Error' . mysqli_error($link) . PHP_EOL;
     }
-    echo '重量表テーブルを削除できませんでした' . PHP_EOL;
-    echo 'Debugging Error' . mysqli_error($link) . PHP_EOL;
 }
 
 $link = dbConnect();

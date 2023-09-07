@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8mb4">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/css/app.css">
+    <link rel="stylesheet" href="/../views/stylesheets/css/app.css">
     <title><?php echo '重量表一覧'; ?></title>
 </head>
 

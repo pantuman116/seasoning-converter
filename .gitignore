@@ -1,2 +1,6 @@
 docker/db/mysql_data
+
 src/vendor
+src/.env
+src/.vscode
+src/.phpunit.cache

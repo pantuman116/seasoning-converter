@@ -4,8 +4,7 @@ parameters:
     - .
   excludePaths:
     - .vscode
-    - databases
-    - stylesheets
+    - api/initialize_weight_table.php
     - vendor
     - views
     - tests
