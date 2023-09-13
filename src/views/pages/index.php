@@ -1,3 +1,4 @@
+<script src="../views/js/index.js" defer></script>
 <div class="container mb-5">
     <div class="row">
         <div class="col text-right">
@@ -15,7 +16,7 @@
         <option value="goldfish">Goldfish</option>
     </select>
     <div>
-        <input type="number" placeholder="数値を入力">
+        <input type="number" placeholder="数値を入力" id="mainValue">
         <select name="pets" id="pet-select">
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
@@ -27,7 +28,7 @@
     </div>
     <div>=</div>
     <div>
-        <input type="number" placeholder="数値を入力">
+        <input type="number" placeholder="数値を入力" id="subValue">
         <select name="pets" id="pet-select">
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
@@ -38,9 +39,9 @@
         </select>
     </div>
     <form method="post">
-        <input type="submit" name="volume_button" value="体積→重量"/>
+        <input type="submit" name="volume_button" value="体積→重量" />
     </form>
     <form method="post">
-        <input type="submit" name="weight_button" value="重量→体積"/>
+        <input type="submit" name="weight_button" value="重量→体積" />
     </form>
 </div>
