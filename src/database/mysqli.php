@@ -20,3 +20,24 @@ function dbConnect(): object
     }
     return $link;
 }
+
+/**
+ * @return array<int<0, max>, array<string, string>> $weights
+ */
+function listWeights(object $link): array
+{
+    $sql = 'SELECT seasoning, tablespoon, teaspoon, cup FROM weights;';
+    $results = mysqli_query($link, $sql);
+
+    $weights = [];
+    while ($weight = mysqli_fetch_assoc($results)) {
+        $weights[] = $weight;
+    }
+    mysqli_free_result($results);
+    return $weights;
+}
+
+function dbClose($link)
+{
+    mysqli_close($link);
+}

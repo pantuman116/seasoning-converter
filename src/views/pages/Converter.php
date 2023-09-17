@@ -1,8 +1,8 @@
-<script src="../views/js/index.js" defer></script>
+<script src="views/js/InputEvent.js" defer></script>
 <div class="container mb-5">
     <div class="row">
         <div class="col text-right">
-            <a href="weights.php" class="btn btn-primary">重量表一覧</a>
+            <a href="app/controller/WeightTable.php" class="btn btn-primary">重量表一覧</a>
         </div>
     </div>
 </div>
@@ -38,10 +38,4 @@
             <option value="goldfish">Goldfish</option>
         </select>
     </div>
-    <form method="post">
-        <input type="submit" name="volume_button" value="体積→重量" />
-    </form>
-    <form method="post">
-        <input type="submit" name="weight_button" value="重量→体積" />
-    </form>
 </div>

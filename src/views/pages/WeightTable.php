@@ -1,7 +1,7 @@
 <div class="container mb-5">
     <div class="row">
         <div class="col text-left">
-            <a href="index.php" class="btn btn-primary">単位変換</a>
+            <a href="/" class="btn btn-primary">単位変換</a>
         </div>
         <div class="col text-right">
             <a href="" class="btn btn-primary">新規追加</a>

@@ -1,8 +1,8 @@
 <?php
 
-namespace app;
+namespace app\framework;
 
-interface UnitConversion
+interface Converter
 {
     public function calcMainValue();
     public function calcSubValue();

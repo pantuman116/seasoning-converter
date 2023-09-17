@@ -21,17 +21,31 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use app\UnitConversionVolumeWeight;
-use app\MainValue;
-use app\SubValue;
+use app\converter\VolumeWeight;
+use app\converter\VolumeWeightCoefficientSeasoning;
+use app\unit\volume\VolumeFactory;
+use app\unit\weight\WeightFactory;
 
-$mainValue = new MainValue(1);
-$subValue = new SubValue(21);
+$mainValue = 1;
+$subValue = 42;
 
-$object = new UnitConversionVolumeWeight(1.4, $mainValue, 15, $subValue, 1);
+//Unit生成
+$volumeFactory = new VolumeFactory();
+$weightFactory = new WeightFactory();
 
-$subValue = $subValue->changeValue($object->calcSubValue());
-echo $subValue->getValue() . PHP_EOL;
+$mainUnit = $volumeFactory->getUnit('大さじ');
+$mainUnit = $mainUnit->changeValue($mainValue);
 
-$mainValue = $mainValue->changeValue($object->calcMainValue());
-echo $mainValue->getValue() . PHP_EOL;
+$subUnit = $weightFactory->getUnit('g');
+$subUnit = $subUnit->changeValue($subValue);
+
+//Converter生成
+$conversionCoefficient = new VolumeWeightCoefficientSeasoning('はちみつ');
+$converter = new VolumeWeight($conversionCoefficient, $mainUnit, $subUnit);
+
+//Converter計算
+$subValue = $converter->calcSubValue();
+echo $subValue . PHP_EOL;
+
+$mainValue = $converter->calcMainValue();
+echo $mainValue . PHP_EOL;
