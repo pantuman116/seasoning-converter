@@ -12,8 +12,8 @@ class VolumeFactory implements UnitFactory
     {
         $defaultValue = 0.0;
         $this->volumeUnitList = [
-            'ml' => new Ml($defaultValue),
             '大さじ' => new TableSpoon($defaultValue),
+            'ml' => new Ml($defaultValue),
         ];
     }
 
