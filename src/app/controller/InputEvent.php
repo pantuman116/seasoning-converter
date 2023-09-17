@@ -8,29 +8,41 @@ use app\unit\volume\VolumeFactory;
 use app\unit\weight\WeightFactory;
 
 //リクエスト受信
+$changeType = $_POST['changeType'];
+$seasoning = $_POST['seasoning'];
 $mainValue = $_POST['mainValue'];
-$subValue = 21;
+$mainUnit = $_POST['mainUnit'];
+$subValue = $_POST['subValue'];
+$subUnit = $_POST['subUnit'];
 
 //Unit生成
 $volumeFactory = new VolumeFactory();
 $weightFactory = new WeightFactory();
 
-$mainUnit = $volumeFactory->getUnit('大さじ');
-$mainUnit = $mainUnit->changeValue($mainValue);
+$mainUnit = $volumeFactory->getUnit($mainUnit);
+if ($mainValue !== "") {
+    $mainUnit = $mainUnit->changeValue($mainValue);
+}
 
-$subUnit = $weightFactory->getUnit('g');
-$subUnit = $subUnit->changeValue($subValue);
+$subUnit = $weightFactory->getUnit($subUnit);
+if ($subValue !== "") {
+    $subUnit = $subUnit->changeValue($subValue);
+}
 
 //Converter生成
-$conversionCoefficient = new VolumeWeightCoefficientSeasoning('はちみつ');
+$conversionCoefficient = new VolumeWeightCoefficientSeasoning($seasoning);
 $converter = new VolumeWeight($conversionCoefficient, $mainUnit, $subUnit);
 
 //Converter計算
-$subValue = $converter->calcSubValue();
-$mainValue = $converter->calcMainValue();
+if ($changeType === 'subValue') {
+    $mainValue = $converter->calcMainValue();
+} else {
+    $subValue = $converter->calcSubValue();
+}
 
 //レスポンス
 $response = [
+    'mainValue' => "$mainValue",
     'subValue' => "$subValue",
 ];
 

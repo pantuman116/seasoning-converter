@@ -6,36 +6,46 @@
         </div>
     </div>
 </div>
-<div class="border">
-    <select name="pets" id="pet-select">
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-        <option value="hamster">Hamster</option>
-        <option value="parrot">Parrot</option>
-        <option value="spider">Spider</option>
-        <option value="goldfish">Goldfish</option>
-    </select>
+<div class="card">
+    <h6 class="card-header">Seasoning Converter</h6>
     <div>
-        <input type="number" placeholder="数値を入力" id="mainValue">
-        <select name="pets" id="pet-select">
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
+        <select class="form-select form-select-lg m-3" name="seasoning" id="seasoning">
+            <?php foreach ($seasoningList as $seasoning) : ?>
+                <option value=<?php echo $seasoning; ?>><?php echo $seasoning; ?></option>
+            <?php endforeach; ?>
         </select>
     </div>
-    <div>=</div>
-    <div>
-        <input type="number" placeholder="数値を入力" id="subValue">
-        <select name="pets" id="pet-select">
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
-        </select>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card ml-3">
+                <div class="ml-3 mt-3">
+                    <input type="number" placeholder="数値を入力" id="mainValue">
+                </div>
+                <div class="ml-3 mb-3">
+                    <select name="mainUnit" id="mainUnit">
+                        <?php foreach ($mainUnitList as $mainUnit) : ?>
+                            <option value=<?php echo $mainUnit; ?>><?php echo $mainUnit; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center text-large">
+            <h3>=</h3>
+        </div>
+        <div class="col-sm-5">
+            <div class="card mr-3">
+                <div class="mr-3 mt-3">
+                    <input type="number" placeholder="数値を入力" id="subValue">
+                </div>
+                <div class="mr-3 mb-3">
+                    <select name="subUnit" id="subUnit">
+                        <?php foreach ($subUnitList as $subUnit) : ?>
+                            <option value=<?php echo $subUnit; ?>><?php echo $subUnit; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

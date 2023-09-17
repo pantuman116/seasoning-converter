@@ -22,4 +22,10 @@ class Database
         $weights = listWeights($this->link);
         return array_column($weights, 'tablespoon', 'seasoning');
     }
+
+    public function getSeasoningList()
+    {
+        $weights = listWeights($this->link);
+        return array_column($weights, 'seasoning');
+    }
 }
