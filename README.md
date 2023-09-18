@@ -1,4 +1,31 @@
-# seasoning-converter
+# **Seasoning Converter　　〜調味料別体積重量変換器〜**
+
+## 課題設定
+
+## 要件定義
+<details>
+<summary>業務フロー</summary>
+
+aaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbb
+ccccccccccccccccccccc
+</details>
+
+## インフラ
+<details>
+<summary>インフラ構成図</summary>
+
+aaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbb
+ccccccccccccccccccccc
+</details>
+
+## 開発環境
+
+## パッケージ、クラス
+
+
+
 
 ## デプロイまでのコマンド（コピペ用）
 ### ローカル環境
