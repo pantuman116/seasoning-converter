@@ -13,7 +13,7 @@
         <?php if (count($weights) > 0) : ?>
             <thead>
                 <tr>
-                    <th scope="col">調味料</th>
+                    <th scope="col">調味料(五十音順)</th>
                     <th scope="col">大さじ1（15cc）</th>
                     <th scope="col">小さじ1（5cc）</th>
                     <th scope="col">カップ1（200cc）</th>

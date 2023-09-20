@@ -17,15 +17,22 @@ class Database
         dbClose($this->link);
     }
 
-    public function getWeightTableSpoon()
+    public function getWeights()
     {
         $weights = listWeights($this->link);
+        array_multisort(array_column($weights, 'reading'), SORT_ASC, $weights);
+        return $weights;
+    }
+
+    public function getWeightTableSpoon()
+    {
+        $weights = $this->getWeights();
         return array_column($weights, 'tablespoon', 'seasoning');
     }
 
     public function getSeasoningList()
     {
-        $weights = listWeights($this->link);
+        $weights = $this->getWeights();
         return array_column($weights, 'seasoning');
     }
 }

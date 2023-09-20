@@ -26,7 +26,7 @@ function dbConnect(): object
  */
 function listWeights(object $link): array
 {
-    $sql = 'SELECT seasoning, tablespoon, teaspoon, cup FROM weights;';
+    $sql = 'SELECT seasoning, reading, tablespoon, teaspoon, cup FROM weights;';
     $results = mysqli_query($link, $sql);
 
     $weights = [];

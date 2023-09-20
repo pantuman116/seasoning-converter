@@ -6,20 +6,23 @@ function insertDefaultTable($link): void
 {
 
     $defaultTable = [
-        'water' => [
+        [
             'seasoning' => '水',
+            'reading' => 'みず',
             'tablespoon' => 15,
             'teaspoon' => 5,
             'cup' => 200,
         ],
-        'soisource' => [
+        [
             'seasoning' => '醤油',
+            'reading' => 'しょうゆ',
             'tablespoon' => 18,
             'teaspoon' => 6,
             'cup' => 240,
         ],
-        'hunney' => [
+        [
             'seasoning' => 'はちみつ',
+            'reading' => 'はちみつ',
             'tablespoon' => 21,
             'teaspoon' => 7,
             'cup' => 280,
@@ -30,11 +33,13 @@ function insertDefaultTable($link): void
         $insertTableSql = <<<EOT
         INSERT INTO weights (
             seasoning,
+            reading,
             tablespoon,
             teaspoon,
             cup
         ) VALUES (
             "{$columns['seasoning']}",
+            "{$columns['reading']}",
             "{$columns['tablespoon']}",
             "{$columns['teaspoon']}",
             "{$columns['cup']}"
@@ -56,6 +61,7 @@ function createTable($link): void
         CREATE TABLE weights (
             id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
             seasoning VARCHAR(255),
+            reading VARCHAR(255),
             tablespoon INTEGER,
             teaspoon INTEGER,
             cup INTEGER,

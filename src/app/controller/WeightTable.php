@@ -1,11 +1,12 @@
 <?php
 
 // require_once __DIR__ . '/../api/escape.php';
-require_once __DIR__ . '/../../database/mysqli.php';
+require_once __DIR__ . "/../../vendor/autoload.php";
 
-$link = dbConnect();
-$weights = listWeights($link);
-mysqli_close($link);
+use app\controller\Database;
+
+$db = new Database();
+$weights = $db->getWeights();
 
 $title = '重量表一覧';
 $contents = __DIR__ . '/../../views/pages/WeightTable.php';
