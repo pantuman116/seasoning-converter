@@ -6,14 +6,15 @@ use app\framework\UnitFactory;
 
 class VolumeFactory implements UnitFactory
 {
-    protected $volumeUnitList = [];
+    /** @var array<Volume> */
+    protected array $volumeUnitList = [];
 
     public function __construct()
     {
         $defaultValue = 0.0;
         $this->volumeUnitList = [
             '大さじ' => new TableSpoon($defaultValue),
-            'ml' => new Ml($defaultValue),
+            'ml' => new Milliliter($defaultValue),
         ];
     }
 

@@ -7,7 +7,7 @@ use app\unit\weight\Weight;
 class Gram implements Weight
 {
     protected float $value;
-    const BASE_UNIT_COEFFICIENT = 1.0;
+    protected const BASE_UNIT_COEFFICIENT = 1.0;
 
     public function __construct(float $value)
     {

@@ -6,6 +6,7 @@ use app\framework\UnitFactory;
 
 class WeightFactory implements UnitFactory
 {
+    /** @var array<Weight> */
     protected $weightUnitList = [];
 
     public function __construct()

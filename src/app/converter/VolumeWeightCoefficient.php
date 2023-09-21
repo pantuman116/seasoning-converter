@@ -4,5 +4,5 @@ namespace app\converter;
 
 interface VolumeWeightCoefficient
 {
-    public function getValue();
+    public function getValue(): float;
 }

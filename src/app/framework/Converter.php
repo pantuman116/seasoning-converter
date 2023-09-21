@@ -4,6 +4,6 @@ namespace app\framework;
 
 interface Converter
 {
-    public function calcMainValue();
-    public function calcSubValue();
+    public function calcMainValue(): float;
+    public function calcSubValue(): float;
 }

@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-function dbConnect(): object
+function dbConnect(): mysqli
 {
     $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..');
     $dotenv->load();
@@ -37,7 +37,7 @@ function listWeights(object $link): array
     return $weights;
 }
 
-function dbClose($link)
+function dbClose(mysqli $link): void
 {
     mysqli_close($link);
 }

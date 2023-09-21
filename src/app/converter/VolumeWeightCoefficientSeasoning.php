@@ -11,10 +11,10 @@ class VolumeWeightCoefficientSeasoning implements VolumeWeightCoefficient
 
     public function __construct(string $target)
     {
-        $defaultWeightTablespoon = 15.0;
-        $db = new Database();
-        $weightsTablespoon = $db->getWeightTableSpoon();
-        $this->value = $weightsTablespoon[$target] / $defaultWeightTablespoon;
+        $defWeightTablespoon = 15.0;
+        $dbObj = new Database();
+        $weightsTablespoon = $dbObj->getWeightTableSpoon();
+        $this->value = (float)$weightsTablespoon[$target] / $defWeightTablespoon;
     }
 
     public function getValue(): float

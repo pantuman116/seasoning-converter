@@ -9,23 +9,29 @@ use app\converter\VolumeWeightCoefficient;
 
 class VolumeWeight implements Converter
 {
-    protected VolumeWeightCoefficient $conversionCoefficient;
+    protected VolumeWeightCoefficient $conversionCoeff;
     protected Volume $volume;
     protected Weight $weight;
 
-    public function __construct(VolumeWeightCoefficient $conversionCoefficient, Volume $volume, Weight $weight)
+    public function __construct(VolumeWeightCoefficient $conversionCoeff, Volume $volume, Weight $weight)
     {
-        $this->conversionCoefficient = $conversionCoefficient;
+        $this->conversionCoeff = $conversionCoeff;
         $this->volume = $volume;
         $this->weight = $weight;
     }
     public function calcMainValue(): float
     {
-        return $this->weight->getBaseUnitValue() / $this->volume->getBaseUnitCoefficient() / $this->conversionCoefficient->getValue();
+        $weightBaseUnitValue = $this->weight->getBaseUnitValue();
+        $volumeBaseUnitCoeff = $this->volume->getBaseUnitCoefficient();
+        $conversionCoeff = $this->conversionCoeff->getValue();
+        return $weightBaseUnitValue / $volumeBaseUnitCoeff / $conversionCoeff;
     }
 
     public function calcSubValue(): float
     {
-        return $this->volume->getBaseUnitValue() / $this->weight->getBaseUnitCoefficient() * $this->conversionCoefficient->getValue();
+        $volumeBaseUnitValue = $this->volume->getBaseUnitValue();
+        $weightBaseUnitCoeff = $this->weight->getBaseUnitCoefficient();
+        $conversionCoeff = $this->conversionCoeff->getValue();
+        return $volumeBaseUnitValue / $weightBaseUnitCoeff * $conversionCoeff;
     }
 }

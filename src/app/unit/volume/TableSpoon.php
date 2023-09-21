@@ -7,7 +7,7 @@ use app\unit\volume\Volume;
 class TableSpoon implements Volume
 {
     protected float $value;
-    const BASE_UNIT_COEFFICIENT = 15.0;
+    protected const BASE_UNIT_COEFFICIENT = 15.0;
 
     public function __construct(float $value)
     {
@@ -29,7 +29,7 @@ class TableSpoon implements Volume
         return self::BASE_UNIT_COEFFICIENT;
     }
 
-    public function changeValue(float $value)
+    public function changeValue(float $value): TableSpoon
     {
         return new TableSpoon($value);
     }

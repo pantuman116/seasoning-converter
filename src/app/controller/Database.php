@@ -2,35 +2,50 @@
 
 namespace app\controller;
 
+use mysqli;
+
 require_once __DIR__ . '/../../database/mysqli.php';
 
 class Database
 {
-    protected $link;
+    protected mysqli $link;
 
-    function __construct()
+    public function __construct()
     {
         $this->link = dbConnect();
     }
 
-    function __destruct() {
+    public function __destruct()
+    {
         dbClose($this->link);
     }
 
-    public function getWeights()
+    /**
+     * @return array<int, array<string,string>>
+     */
+    public function getWeights(): array
     {
         $weights = listWeights($this->link);
-        array_multisort(array_column($weights, 'reading'), SORT_ASC, $weights);
+        //ふりがな(reading)で昇順に並び替え
+        $weightsSelectedRows = array_column($weights, 'reading');
+        array_multisort($weightsSelectedRows, SORT_ASC, $weights);
+
         return $weights;
     }
 
-    public function getWeightTableSpoon()
+    /**
+     * @return array<string, string>
+     */
+    public function getWeightTableSpoon(): array
     {
         $weights = $this->getWeights();
         return array_column($weights, 'tablespoon', 'seasoning');
     }
 
-    public function getSeasoningList()
+    /**
+     * @return array<string>
+     */
+    public function getSeasoningList(): array
     {
         $weights = $this->getWeights();
         return array_column($weights, 'seasoning');

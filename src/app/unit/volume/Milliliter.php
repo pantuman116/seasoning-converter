@@ -4,10 +4,10 @@ namespace app\unit\volume;
 
 use app\unit\volume\Volume;
 
-class Ml implements Volume
+class Milliliter implements Volume
 {
     protected float $value;
-    const BASE_UNIT_COEFFICIENT = 1.0;
+    protected const BASE_UNIT_COEFFICIENT = 1.0;
 
     public function __construct(float $value)
     {
@@ -29,8 +29,8 @@ class Ml implements Volume
         return self::BASE_UNIT_COEFFICIENT;
     }
 
-    public function changeValue(float $value)
+    public function changeValue(float $value): Milliliter
     {
-        return new Ml($value);
+        return new Milliliter($value);
     }
 }
