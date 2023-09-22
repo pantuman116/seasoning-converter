@@ -61,7 +61,12 @@ AWS上に構築したインフラ構成を示します。コンセプトは、�
 ## パッケージ、クラス
 
 ## 参考
+### GitHub
 
+GitHub Actions ⇆ AWS連携
+* [GitHub Docs：アマゾン ウェブ サービスでの OpenID Connect の構成](https://docs.github.com/ja/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
+* [GitHub Actions と AWS で実現する DevOps 実践講座](https://ricoh.udemy.com/course/devops-gha-aws-infra/learn/lecture/34306760#overview
+)
 ## 開発用
 ### デプロイまでのコマンド（コピペ用）
 ローカル環境
