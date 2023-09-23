@@ -28,7 +28,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
     - name: AWS access test
       run: |
-        aws ec2-instance-connect ssh --instance-id i-08f38947004cd232d
+        aws ec2 describe-vpcs
         
         
       
