@@ -1,6 +1,6 @@
 name: Seasoning Converter CICD
 
-on: 
+on:
   push:
     branches:
       - main
@@ -14,18 +14,28 @@ env:
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read  # This is required for actions/checkout
-  
+
 jobs:
-  cicd:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Git clone the repository
       uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker compose -f docker-compose_deploy.yml build
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v3
       with:
         role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
         aws-region: ${{ env.AWS_REGION }}
+    - name: Obtain an authentication token to authenticate your Docker client to your registry.
+      run: aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 970168658714.dkr.ecr.ap-northeast-1.amazonaws.com
+    - name: Push Docker Image to ECR
+      run: docker compose -f docker-compose_deploy.yml push
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@v1.0.0
       with:
