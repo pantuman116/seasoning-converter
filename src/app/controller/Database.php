@@ -34,15 +34,6 @@ class Database
     }
 
     /**
-     * @return array<string, string>
-     */
-    public function getWeightTableSpoon(): array
-    {
-        $weights = $this->getWeights();
-        return array_column($weights, 'tablespoon', 'seasoning');
-    }
-
-    /**
      * @return array<string>
      */
     public function getSeasoningList(): array
