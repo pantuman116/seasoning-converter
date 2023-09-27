@@ -19,6 +19,11 @@ class Milliliter implements Volume
         return 'ml';
     }
 
+    public function getTableNotation(): string
+    {
+        return 'ml';
+    }
+
     public function getBaseUnitValue(): float
     {
         return $this->value * self::BASE_UNIT_COEFFICIENT;

@@ -19,6 +19,11 @@ class TableSpoon implements Volume
         return '大さじ';
     }
 
+    public function getTableNotation(): string
+    {
+        return 'tablespoon';
+    }
+
     public function getBaseUnitValue(): float
     {
         return $this->value * self::BASE_UNIT_COEFFICIENT;

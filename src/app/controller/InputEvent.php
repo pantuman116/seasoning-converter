@@ -30,7 +30,7 @@ if ($subValue !== "") {
 }
 
 //Converter生成
-$conversionCoefficient = new VolumeWeightCoefficientSeasoning($seasoning);
+$conversionCoefficient = new VolumeWeightCoefficientSeasoning($seasoning, $mainUnit);
 $converter = new VolumeWeight($conversionCoefficient, $mainUnit, $subUnit);
 
 //Converter計算
