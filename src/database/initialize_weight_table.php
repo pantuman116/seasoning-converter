@@ -90,6 +90,55 @@ function insertDefaultTable(mysqli $link): void
             'teaspoon' => 5,
             'cup' => 230,
         ],
+        [
+            'seasoning' => 'オリーブオイル',
+            'reading' => 'おりーぶおいる',
+            'tablespoon' => 12,
+            'teaspoon' => 4,
+            'cup' => 180,
+        ],
+        [
+            'seasoning' => 'ごま油',
+            'reading' => 'ごまあぶら',
+            'tablespoon' => 12,
+            'teaspoon' => 4,
+            'cup' => 180,
+        ],
+        [
+            'seasoning' => 'バター',
+            'reading' => 'ばたー',
+            'tablespoon' => 12,
+            'teaspoon' => 4,
+            'cup' => 180,
+        ],
+        [
+            'seasoning' => '料理酒',
+            'reading' => 'りょうりしゅ',
+            'tablespoon' => 15,
+            'teaspoon' => 5,
+            'cup' => 200,
+        ],
+        [
+            'seasoning' => 'ウスターソース',
+            'reading' => 'うすたーそーす',
+            'tablespoon' => 17,
+            'teaspoon' => 6,
+            'cup' => 240,
+        ],
+        [
+            'seasoning' => '食塩',
+            'reading' => 'しょくえん',
+            'tablespoon' => 18,
+            'teaspoon' => 6,
+            'cup' => 240,
+        ],
+        [
+            'seasoning' => '粗塩',
+            'reading' => 'あらじお',
+            'tablespoon' => 15,
+            'teaspoon' => 5,
+            'cup' => 180,
+        ],
     ];
 
     foreach ($defaultTable as $columns) {
