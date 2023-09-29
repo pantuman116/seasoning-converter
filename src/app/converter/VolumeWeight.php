@@ -24,7 +24,7 @@ class VolumeWeight implements Converter
         $weightBaseUnitValue = $this->weight->getBaseUnitValue();
         $volumeBaseUnitCoeff = $this->volume->getBaseUnitCoefficient();
         $conversionCoeff = $this->conversionCoeff->getValue();
-        return $weightBaseUnitValue / $volumeBaseUnitCoeff / $conversionCoeff;
+        return round($weightBaseUnitValue / $volumeBaseUnitCoeff / $conversionCoeff, 1);
     }
 
     public function calcSubValue(): float
@@ -32,6 +32,6 @@ class VolumeWeight implements Converter
         $volumeBaseUnitValue = $this->volume->getBaseUnitValue();
         $weightBaseUnitCoeff = $this->weight->getBaseUnitCoefficient();
         $conversionCoeff = $this->conversionCoeff->getValue();
-        return $volumeBaseUnitValue / $weightBaseUnitCoeff * $conversionCoeff;
+        return round($volumeBaseUnitValue / $weightBaseUnitCoeff * $conversionCoeff, 1);
     }
 }
