@@ -46,7 +46,7 @@
 </details>
 
 ## インフラ
-AWS上に構築したインフラ構成を示します。コンセプトは、できるだけコストを抑えつつ、DockerやCICD環境について学べて、常時閲覧可能なWebサイトとしました。
+AWS上に構築したインフラ構成を示します。なるべくコストを抑えつつ、AWSやDocker、CICDについて学べて、常時閲覧可能なWebサイトにしました。
 * VPC、Public Subnet、Security Group（SSH,HTTP）を設定
 * EC2インスタンス（インスタンスタイプ：t2.micro）を起動
 * EC2インスタンス上にDocker環境構築
@@ -59,6 +59,12 @@ AWS上に構築したインフラ構成を示します。コンセプトは、�
 </details>
 
 ## 開発環境
+* Webサーバー用コンテナ: PHP + Apache
+* DBサーバー用コンテナ: MySQL
+* 静的解析&テスト: PHP CodeSniffer, PHP Md, PHP Stan, PHP Unitを実施してGitHubへPush
+* ビルド: GitHub ActionsにてDocker Imageをビルドし、Docker ImageをAWS ECRへPush
+* デプロイ: GitHub ActionsにてAWS EC2インスタンスにSSH接続し、Docker ImageのPullとDockerコンテナの再起動
+
 <details>
 <summary>開発環境</summary>
 
