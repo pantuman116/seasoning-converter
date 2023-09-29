@@ -1,6 +1,6 @@
 # **Seasoning Converter　　〜調味料別体積重量変換器〜**
 ## サイトリンク
-[Seasoning Converter](https://pantuman.com/)
+[Seasoning Converter](http://pantuman.com/)
 
 ## 課題設定
 1. 背景
