@@ -4,4 +4,5 @@ src/vendor
 src/.env
 src/.phpunit.cache
 src/images
+docker/db/db-variables.env
 .DS_Store
