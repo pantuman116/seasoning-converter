@@ -17,32 +17,32 @@
 要件定義として、業務要件（業務フロー）、機能要件（ページ遷移図、WF：ワイヤーフレーム・機能・データ）を示します。
 <details>
 <summary>業務フロー</summary>
-  
-![ポートフォリオ](https://github.com/pantuman116/seasoning-converter/assets/80459750/f3c489f0-70e4-4662-8975-869e37d0c38d)
+
+![業務フロー](https://github.com/pantuman116/seasoning-converter/assets/80459750/8112c873-659b-4709-b918-46ad7710503a)
 </details>
 
 <details>
 <summary>ページ遷移図</summary>
-  
-  ![ページ遷移図](https://github.com/pantuman116/seasoning-converter/assets/80459750/02c3d5e3-33d6-4d48-86b1-654243cd0313)
+   
+![ページ遷移図](https://github.com/pantuman116/seasoning-converter/assets/80459750/dfd5ec42-d843-4c01-9347-06bcb97ab93a)
 </details>
 
 <details>
 <summary>WF・機能・データ (変換)</summary>
 
-  ![WF1](https://github.com/pantuman116/seasoning-converter/assets/80459750/031b4739-e27c-48e0-b6f3-e0be2e55a18e)
+![WF・機能・データ (変換)](https://github.com/pantuman116/seasoning-converter/assets/80459750/b62df2be-f836-47b6-af90-170b641abdc3)
 </details>
 
 <details>
 <summary>WF・機能・データ (重量表)</summary>
 
-  ![WF2](https://github.com/pantuman116/seasoning-converter/assets/80459750/1bad6426-884c-40bc-8ed4-5f5d10cbb6d3)
+![WF・機能・データ (重量表) ](https://github.com/pantuman116/seasoning-converter/assets/80459750/b1b1ee52-f216-49a5-ae6c-c381b5f3e004)
 </details>
 
 <details>
 <summary>WF・機能・データ (調味料新規追加)</summary>
 
-  ![WF3](https://github.com/pantuman116/seasoning-converter/assets/80459750/88a4fd7d-e5f8-48f5-b630-c82efb5a9b12)
+![WF・機能・データ (調味料新規追加) ](https://github.com/pantuman116/seasoning-converter/assets/80459750/b0aafbaa-760e-43ed-8af6-b49e72efad2b)
 </details>
 
 ## インフラ
@@ -55,7 +55,7 @@ AWS上に構築したインフラ構成を示します。なるべくコスト�
 <details>
 <summary>インフラ構成図</summary>
 
-  ![インフラ構築](https://github.com/pantuman116/seasoning-converter/assets/80459750/abe17ba7-d87d-4a69-b6e4-1c1d96c27d09)
+![インフラ構築 ](https://github.com/pantuman116/seasoning-converter/assets/80459750/8264de92-7aef-40e2-abe2-b1923585ca66)
 </details>
 
 ## 開発環境
@@ -68,7 +68,7 @@ AWS上に構築したインフラ構成を示します。なるべくコスト�
 <details>
 <summary>開発環境</summary>
 
-![ポートフォリオ](https://github.com/pantuman116/seasoning-converter/assets/80459750/b6709b44-f29d-4476-b332-7713eb9b32d4)
+![開発環境](https://github.com/pantuman116/seasoning-converter/assets/80459750/1fca5c49-ea19-4fac-85a7-cc986a6b7a8c)
 </details>
 
 ## パッケージ、クラス
