@@ -14,6 +14,7 @@ class WeightFactory implements UnitFactory
         $defaultValue = 0.0;
         $this->weightUnitList = [
             'g' => new Gram($defaultValue),
+            'ポンド' => new Pound($defaultValue),
         ];
     }
 
