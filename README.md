@@ -89,14 +89,41 @@ Webサーバー用コンテナ上のサーバーサイドの処理における�
 ### 全体
 * [独学エンジニア](https://dokugaku-engineer.com/)
 
+### AWS
+
+* [ざっくりAWS](https://aws-rough.cc/ec2/)
+
+### Docker
+
 ### GitHub
 
 GitHub Actions ⇆ AWS連携
 * [GitHub Docs：アマゾン ウェブ サービスでの OpenID Connect の構成](https://docs.github.com/ja/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
-* [GitHub Actions と AWS で実現する DevOps 実践講座](https://ricoh.udemy.com/course/devops-gha-aws-infra/learn/lecture/34306760#overview
-)
+* [GitHub Actions と AWS で実現する DevOps 実践講座](https://www.udemy.com/course/devops-gha-aws-infra/?utm_source=adwords&utm_medium=udemyads&utm_campaign=LongTail_la.JA_cc.JP&utm_content=deal4584&utm_term=_._ag_107181210924_._ad_452531407122_._kw__._de_c_._dm__._pl__._ti_dsa-930814701079_._li_1009216_._pd__._&matchtype=&gclid=CjwKCAjw9-6oBhBaEiwAHv1QvMzwY5DP2t-pFfH0P3Eeyg5dOxsyngJdHNXi_9Nm2hSgDfSyph4RmxoCP5oQAvD_BwE)
+
+### バックエンド（PHP）
+
+* [PHP マニュアル](https://www.php.net/manual/ja/index.php)
+
+Composer
+* [Composer](https://getcomposer.org/)
+
+静的解析＆テストツール
+* [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
+* [PHP Mess Detector](https://phpmd.org/)
+* [PHPStan](https://phpstan.org/)
+* [PHPStan GitHub](https://github.com/phpstan/phpstan)
+* [PHP Unit](https://phpunit.de/index.html)
+
+### フロントエンド（HTML, CSS, JavaScript）
+* [HTML](https://developer.mozilla.org/ja/docs/Web/HTML)
+* [Sass](https://sass-lang.com/)
+* [BootStrap](https://getbootstrap.jp/docs/4.5/getting-started/introduction/)
+* [scssphp](https://scssphp.github.io/scssphp/)
+
+
 ## 開発用
-### デプロイまでのコマンド（コピペ用）
+### 手動でのデプロイまでのコマンド（コピペ用）
 ローカル環境
 ```bash
 # Docker イメージのビルド（本番環境用）
