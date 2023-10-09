@@ -59,7 +59,7 @@ AWS上に構築したインフラ構成を示します。
 </details>
 
 ## 開発環境
-コンテナ上のアプリケーション、静的解析＆テストツール、CICDの流れを示します。
+開発言語、ミドルウェア、静的解析＆テストツール、CICDの流れを示します。
 * Webサーバー用コンテナ: PHP + Apache
 * DBサーバー用コンテナ: MySQL
 * 静的解析&テスト: PHP CodeSniffer, PHP Md, PHP Stan, PHP Unitを実施してGitHubへPush
