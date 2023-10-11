@@ -138,6 +138,7 @@ docker compose -f docker-compose_deploy.yml push
 開発環境：Dockerイメージのプル、コンテナ起動
 ```bash
 # EC2にターミナルからSSH接続
+# 補足：~/.ssh/configにてキーファイルの場所、ユーザー名、ドメイン名を登録しておくことで、任意の文字列でアクセスできる
 ssh -i <key file> <userName@serverIP>
 
 # AWS CLIログイン
