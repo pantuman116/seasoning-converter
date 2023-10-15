@@ -121,6 +121,12 @@ Composer
 * [BootStrap](https://getbootstrap.jp/docs/4.5/getting-started/introduction/)
 * [scssphp](https://scssphp.github.io/scssphp/)
 
+### HTTPS化
+※大苦戦、公式サイト通りにはできなかった、かつ、自動更新対応はできていない
+* [Amazon Linux 2023 での SSL/TLS の設定](https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/SSL-on-amazon-linux-2023.html)
+* [certbot公式](https://certbot.eff.org/instructions?ws=apache&os=debianbuster)
+* [Let’s Encrypt公式](https://letsencrypt.org/ja/)
+* [Debian9 + Apache に"Let's Encrypt"をセットアップしてみた！！](http://www.kmiura.net/archives/8801264.html)
 
 ## 開発用
 ### 手動でのデプロイまでのコマンド（コピペ用）
