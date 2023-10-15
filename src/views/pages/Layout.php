@@ -27,7 +27,7 @@
             <a class="h3 text-body text-decoration-none" href="/">Seasoning Converter</a>
         </div>
         <div class="container">
-            <a class="h6 text-body text-decoration-none" href="/">〜調味料別体積重量変換器〜</a>
+            <a class="h6 text-body text-decoration-none" href="/">〜調味料容量重量変換ツール: 便利なキッチン計算器〜</a>
         </div>
     </header>
     <div class="container">

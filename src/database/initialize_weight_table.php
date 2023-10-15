@@ -139,6 +139,20 @@ function insertDefaultTable(mysqli $link): void
             'teaspoon' => 5,
             'cup' => 180,
         ],
+        [
+            'seasoning' => 'マヨネーズ',
+            'reading' => 'まよねーず',
+            'tablespoon' => 12,
+            'teaspoon' => 4,
+            'cup' => 190,
+        ],
+        [
+            'seasoning' => '味噌',
+            'reading' => 'みそ',
+            'tablespoon' => 18,
+            'teaspoon' => 6,
+            'cup' => 230,
+        ],
     ];
 
     foreach ($defaultTable as $columns) {
