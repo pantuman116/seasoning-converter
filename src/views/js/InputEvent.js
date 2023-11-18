@@ -21,6 +21,10 @@ function checkInput(e)
         return;
     }
 
+    if (isNaN(mainValueElement.value) || isNaN(subValueElement.value)) {
+        return;
+    }
+
     if (mainValueElement.value === "" && subValueElement.value === "") {
         return;
     }

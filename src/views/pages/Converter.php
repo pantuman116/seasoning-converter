@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-5">
             <div class="input-group">
-                <input type="number" class="form-control ml-3 mt-3" placeholder="数値を入力" id="mainValue">
+                <input type="text" class="form-control ml-3 mt-3" placeholder="数値を入力" id="mainValue">
             </div>
             <div class="input-group">
                 <select class="custom-select bg-light ml-3 mb-3" name="mainUnit" id="mainUnit">
@@ -33,7 +33,7 @@
         </div>
         <div class="col-5">
             <div class="input-group">
-                <input type="number" class="form-control  mr-3 mt-3" placeholder="数値を入力" id="subValue">
+                <input type="text" class="form-control  mr-3 mt-3" placeholder="数値を入力" id="subValue">
             </div>
             <div class="input-group">
                 <select class="custom-select bg-light mr-3 mb-3" name="subUnit" id="subUnit">
